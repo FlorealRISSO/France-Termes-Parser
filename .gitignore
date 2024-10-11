@@ -1,0 +1,5 @@
+*.js
+modules/*.js
+france-termes.db
+node_modules
+data.xml
