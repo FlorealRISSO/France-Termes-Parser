@@ -146,7 +146,17 @@ class TermParser {
     }
 
     parse_note(note: XmlElement): string {
-        return note.val.replaceAll('\n', '');
+        const notes: any[] = [];
+        note.children.map((note) => {
+            if (note.name == 'div') {
+                notes.push(note.val);
+            } else {
+                notes.push(note.text);
+            }
+        });
+        let result:any = notes.join('');
+        result = result.replaceAll('\n', '');
+        return result;
     }
 
     parse_tosee(toSee: XmlElement): number[] {

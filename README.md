@@ -34,7 +34,7 @@ npm start
 or
 
 ```bash
-make run
+make
 ```
 
 ## File Structure
